@@ -4,7 +4,8 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 const app = express();
 app.use(cors());
+const axios = require("axios");
 
-app.get(PORT, (_, response) => response.json("Root route for translatim."));
+app.get("/", (_, response) => response.json("Root route for translatim."));
 
 app.listen(PORT, () => console.log(`App is running PORT ${PORT}`));
