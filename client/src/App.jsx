@@ -21,15 +21,19 @@ function App() {
       <header>
         <h1>TranslaTim</h1>
       </header>
-      <form onSubmit={handleTranslate}>
+      <form onSubmit={handleTranslate} className="form-box">
+        <h2>translate your text here</h2>
         <input
           placeholder="Type here..."
           onChange={(event) => setWord(event.target.value)}
           className="input"
         />
 
-        <div className="languages">
-          <select onChange={(event) => setFrom(event.target.value)}>
+        <div className="language-box">
+          <select
+            onChange={(event) => setFrom(event.target.value)}
+            className="language"
+          >
             <option value="ar">Arabic</option>
             <option value="en">English</option>
             <option value="pl">Polish</option>
@@ -37,7 +41,10 @@ function App() {
             <option value="tr">Turkish</option>
           </select>
 
-          <select onChange={(event) => setTo(event.target.value)}>
+          <select
+            onChange={(event) => setTo(event.target.value)}
+            className="language"
+          >
             <option value="ar">Arabic</option>
             <option value="en">English</option>
             <option value="pl">Polish</option>
@@ -48,7 +55,7 @@ function App() {
 
         <div className="output">{translation.translation}</div>
 
-        <button className="button">Submit</button>
+        <button className="button">SUBMIT</button>
       </form>
     </>
   );
