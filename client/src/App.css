@@ -1,14 +1,23 @@
 body {
+  background: url("assets/background.png") no-repeat center center fixed;
   font-family: monospace;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  margin-top: 10em;
 }
 
 header {
-  background-color: #333;
-  color: white;
+  background: rgb(233, 206, 137);
+  background: linear-gradient(
+    6deg,
+    rgba(233, 206, 137, 0.85) 5%,
+    rgba(193, 188, 105, 0.85) 35%,
+    rgba(231, 181, 142, 0.85) 65%,
+    rgba(129, 166, 184, 0.85) 95%
+  );
+  color: rgb(37, 37, 37);
   text-align: center;
   padding: 10px;
 }
@@ -17,6 +26,7 @@ header {
   border: 1px solid #e3e7ea;
   margin-bottom: 24px;
   padding: 25px 50px 40px 50px;
+  background-color: #dddddda8;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -28,12 +38,12 @@ header {
 .button {
   font-family: monospace;
   align-items: center;
-  background-color: #ee6352;
+  background-color: #e27f6a;
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   height: 49px;
   justify-content: center;
@@ -42,10 +52,22 @@ header {
   text-decoration: none;
 }
 
+.button:hover {
+  background: rgb(233, 206, 137);
+  background: linear-gradient(
+    6deg,
+    rgba(233, 206, 137, 0.85) 5%,
+    rgba(193, 188, 105, 0.85) 35%,
+    rgba(231, 181, 142, 0.85) 65%,
+    rgba(129, 166, 184, 0.85) 95%
+  );
+  color: #333;
+}
+
 .language-box {
   display: flex;
   flex-direction: row;
-  margin-bottom: 24px;
+  margin-bottom: 0;
   margin-top: 8px;
   justify-content: space-between;
   color: #ffffff;
@@ -87,6 +109,7 @@ header {
 
 h2 {
   display: block;
+  color: #333;
   font-size: 1.5em;
   margin-block-start: 0em;
   margin-block-end: 0.8em;
